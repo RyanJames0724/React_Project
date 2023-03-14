@@ -30,7 +30,7 @@ export const useValidation = () => {
         } else if (!emailRegex.test(email)) {
             setErrorsAndSuccess('email', 'Email is invalid', false);
             return false
-        } else if (type === 'Login' && registeredUsers && !registeredUsers.some(registeredUser => registeredUser.email === email)) {
+        } else if (type === 'Login' && ((registeredUsers && !registeredUsers.some(registeredUser => registeredUser.email === email)) || !registeredUsers)) {
             setErrorsAndSuccess('email', 'Email does not exist', false);
             return false
         } else {
@@ -47,7 +47,7 @@ export const useValidation = () => {
         } else if (password.length < 8) {
             setErrorsAndSuccess('password', 'Password must be at least 8 characters', false);
             return false
-        } else if (type === 'Login' && registeredUsers && !registeredUsers.some(registeredUser => registeredUser.password === password)) {
+        } else if (type === 'Login' && ((registeredUsers && !registeredUsers.some(registeredUser => registeredUser.password === password)) || !registeredUsers)) {
             setErrorsAndSuccess('password', 'Password does not exist', false);
             return false
         } else {
@@ -98,13 +98,13 @@ export const useValidation = () => {
     const checkUpload = (description, file) => {
         const descriptionRequired = !description ? 'File Description is required' : ''
         const fileRequired = !file ? 'File Input is required' : ''
-      
+
         setErrorsAndSuccess('fileDescription', descriptionRequired, !!description)
         setErrorsAndSuccess('fileInput', fileRequired, !!file)
-      
+
         return description && file ? true : false
-      }
-      
+    }
+
 
     const validateType = type => {
         switch (type) {
