@@ -40,7 +40,7 @@ const Login = () => {
     return (
         <section>
             <div className="login-form-holder">
-                <h1 className="login-heading">Login</h1>
+                <h1 className="login-heading">Login User</h1>
                 <form
                     action="/"
                     method="get"
