@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form label {
+  margin-right: 1.5rem;
+}
+form .login-user-input,
+form .register-user-input {
+  font-weight: 600;
+}
+form .login-user-input .login-input-email,
+form .login-user-input .login-input-password,
+form .register-user-input .login-input-email,
+form .register-user-input .login-input-password {
+  padding: 0.4rem;
+  border: 2px solid;
+  border-radius: 5px;
+}
+form .login-user-input .register-input-name,
+form .login-user-input .register-input-email,
+form .login-user-input .register-input-password,
+form .login-user-input .register-input-confirm,
+form .register-user-input .register-input-name,
+form .register-user-input .register-input-email,
+form .register-user-input .register-input-password,
+form .register-user-input .register-input-confirm {
+  padding: 0.4rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+/* style for both login page and register page */
+section .register-form-holder {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5rem;
+  gap: 2rem;
+  position: absolute;
+  left: 25rem;
+}
+section .register-form-holder .registration-heading {
+  margin-left: 12.2rem;
+}
+section .register-form-holder form {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+section .register-form-holder form .registration-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+section .register-form-holder form .registration-holder .register-user-input .error {
+  color: #ff3860;
+  font-size: 9px;
+  margin-top: 0.5rem;
+  position: absolute;
+  animation: fadeIn 0.3s ease-in-out;
+}
+section .register-form-holder form .registration-holder .register-user-input .has-error {
+  border: 2px solid #ff3860;
+  animation: fadeIn 0.3s ease-in-out;
+}
+section .register-form-holder form .registration-holder .register-user-input .success {
+  border: 2px solid #09c372;
+  animation: fadeIn 0.3s ease-in-out;
+}
+section .register-form-holder form .submit-registration {
+  width: 7rem;
+  margin-left: 11.9rem;
+  background: #66ffff;
+  padding: 0.2rem 0 0.5rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-weight: 600;
+  position: absolute;
+  margin-top: 17.5rem;
+  cursor: pointer;
+}
+section .register-form-holder form .submit-registration:hover {
+  box-shadow: 0 0px 10px #3a3a3a;
+}
+
+/*# sourceMappingURL=register.css.map */

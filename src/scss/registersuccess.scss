@@ -1,0 +1,22 @@
+@use './variables.scss';
+@use './global.scss';
+
+section {
+    .registration-success-container {
+        margin-top: 4rem;
+        text-align: center;
+
+        h1,
+        p {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            color: variables.$anchorColor;
+
+            &:hover {
+                color: variables.$fourthColor;
+            }
+        }
+    }
+}

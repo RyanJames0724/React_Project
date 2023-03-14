@@ -1,0 +1,29 @@
+@use './variables.scss';
+@use './global.scss';
+
+form {
+    label {
+        margin-right: 1.5rem;
+    }
+
+    .login-user-input,
+    .register-user-input {
+        font-weight: 600;
+
+        .login-input-email,
+        .login-input-password {
+            padding: 0.4rem;
+            border: 2px solid;
+            border-radius: 5px;
+        }
+
+        .register-input-name,
+        .register-input-email,
+        .register-input-password,
+        .register-input-confirm {
+            padding: 0.4rem;
+            border: 2px solid variables.$fourthColor;
+            border-radius: 5px;
+        }
+    }
+}

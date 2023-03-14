@@ -1,0 +1,35 @@
+@use './variables.scss';
+@use './global.scss';
+@use './table.scss';
+
+
+.table-container {
+
+    h1 {
+        font-size: 26px;
+        margin: 1rem 0 0.5rem 1rem;
+        text-shadow: 2px 2px variables.$sixthColor;
+    }
+
+    .users-list-table {
+        width: 100%;
+        border: 2px solid variables.$backgroundBorder;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+
+        colgroup {
+            .users-first-column {
+                width: 35%;
+            }
+
+            .users-second-column {
+                width: 35%;
+            }
+
+            .users-third-column {
+                width: 18%;
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.edit-user-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.edit-user-form h1 {
+  font-size: 25px;
+  margin-left: 5rem;
+  text-shadow: 2px 2px #bfbfbf;
+}
+.edit-user-form .form-container .edit-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.edit-user-form .form-container .edit-input .user-input {
+  font-weight: 600;
+}
+.edit-user-form .form-container .edit-input .user-input label {
+  margin-right: 1.5rem;
+}
+.edit-user-form .form-container .edit-input .user-input .fullNameInput,
+.edit-user-form .form-container .edit-input .user-input .emailInput {
+  padding: 0.4rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.edit-user-form .form-container .edit-input .user-input .error {
+  color: #ff3860;
+  font-size: 9px;
+  margin-top: 0.5rem;
+  position: absolute;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.edit-user-form .form-container .edit-input .user-input .has-error {
+  border: 2px solid #ff3860;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.edit-user-form .form-container .edit-input .user-input .success {
+  border: 2px solid #09c372;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.edit-user-form .form-container .submit-edit {
+  width: 7rem;
+  margin-left: 7.9rem;
+  background: #66ffff;
+  padding: 0.2rem 0 0.5rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.edit-user-form .form-container .submit-edit:hover {
+  box-shadow: 0 0px 10px #3a3a3a;
+}
+
+/*# sourceMappingURL=edituser.css.map */

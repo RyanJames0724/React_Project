@@ -1,0 +1,80 @@
+@use "./variables.scss";
+@use './global.scss';
+@use "./form.scss";
+
+/* style for both login page and register page */
+section {
+  .register-form-holder {
+    display: variables.$flex-display;
+    flex-direction: column;
+    margin-top: 4.5rem;
+    gap: 2rem;
+    position: absolute;
+    left: 25rem;
+
+    .registration-heading {
+      margin-left: 12.2rem;
+    }
+
+    form {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+
+      .registration-holder {
+        display: variables.$flex-display;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1.5rem;
+
+        .register-user-input {
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+
+            to {
+              opacity: 1;
+            }
+          }
+
+          .error {
+            color: variables.$error;
+            font-size: 9px;
+            margin-top: 0.5rem;
+            position: absolute;
+            animation: fadeIn 0.3s ease-in-out;
+          }
+
+          .has-error {
+            border: 2px solid variables.$error;
+            animation: fadeIn 0.3s ease-in-out;
+          }
+
+          .success {
+            border: 2px solid variables.$success;
+            animation: fadeIn 0.3s ease-in-out;
+          }
+        }
+      }
+
+      .submit-registration {
+        width: 7rem;
+        margin-left: 11.9rem;
+        background: variables.$primaryButton;
+        padding: 0.2rem 0 0.5rem;
+        border: 2px solid variables.$backgroundBorder;
+        border-radius: 10px;
+        font-weight: 600;
+        position: absolute;
+        margin-top: 17.5rem;
+        cursor: pointer;
+
+        &:hover {
+          @include variables.buttonShadow;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@use './variables.scss';
+@use './global.scss';
+
+/* styling the nav bar */
+.chat-form {
+    .chat-container {
+        border: 2px solid variables.$backgroundBorder;
+        border-radius: 8px;
+        width: 100%;
+        margin-top: 1rem;
+
+        .chat-close {
+            display: flex;
+            border-bottom: 2px solid variables.$backgroundBorder;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: .5rem;
+
+            p {
+                margin-left: 34rem;
+                width: 10rem;
+                text-shadow: 2px 2px variables.$sixthColor;
+            }
+
+            .close-image {
+                width: 50%;
+                display: variables.$flex-display;
+                justify-content: flex-end;
+
+                .close-modal-fa:hover {
+                    color: variables.$firstColor;
+                }
+            }
+        }
+
+        .chat-main-content {
+            width: 100%;
+            padding: 2rem 1rem;
+            height: 18rem;
+
+            p {
+                margin-bottom: .3rem;
+            }
+        }
+    }
+
+    .user-message-container {
+        border-left: 2px solid variables.$backgroundBorder;
+        border-right: 2px solid variables.$backgroundBorder;
+        border-bottom: 2px solid variables.$backgroundBorder;
+        border-radius: 0 0 8px 8px;
+        width: 100%;
+        padding: 1.5rem 2rem 0.6rem;
+        display: variables.$flex-display;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 24.5rem;
+
+        p {
+            font-weight: 700;
+            width: 9rem;
+        }
+
+        .user-message {
+            width: 64rem;
+            height: 2.5rem;
+            outline: none;
+            border: 2px solid variables.$backgroundBorder;
+            border-radius: 0.3rem;
+            padding: 0.8rem 1rem;
+        }
+
+        .message-button {
+            width: 11rem;
+            display: variables.$flex-display;
+            gap: .5rem;
+
+
+            .send-message-button {
+                font-weight: bold;
+                text-decoration: none;
+                border: 2px solid variables.$backgroundBorder;
+                border-radius: 10px;
+                padding: 0.2rem 0.5rem 0.3rem;
+                background: transparent;
+                cursor: pointer;
+                margin-left: 1rem;
+
+                &:hover {
+                    background: variables.$sixthColor;
+                    color: variables.$fifthColor;
+                    border: 2px solid variables.$sixthColor;
+                }
+            }
+
+            .refresh-page-button {
+                font-weight: bold;
+                text-decoration: none;
+                border: 2px solid variables.$backgroundBorder;
+                border-radius: 10px;
+                padding: 0.2rem 0.5rem 0.3rem;
+                background: transparent;
+                cursor: pointer;
+                margin-left: .5rem;
+
+                &:hover {
+                    background: variables.$sixthColor;
+                    color: variables.$fifthColor;
+                    border: 2px solid variables.$sixthColor;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@use './variables.scss';
+@use './global.scss';
+
+thead {
+    tr {
+        th {
+            background-color: variables.$tablefirstColor;
+            padding: 0.5rem 0.5rem;
+            font-weight: 400;
+
+            &:not(:last-child) {
+                border-right: 2px solid variables.$fourthColor;
+            }
+        }
+
+        .align-left {
+            text-align: start;
+        }
+
+        .add-space {
+            display: variables.$flex-display;
+            justify-content: space-between;
+
+            button {
+                background: none;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    color: variables.$firstColor;
+                }
+            }
+        }
+    }
+}
+
+tbody {
+    tr {
+        text-align: center;
+
+        &:nth-child(even) {
+            background-color: variables.$tablesecondColor;
+        }
+
+        td {
+            padding: 0.5rem 0.5rem;
+
+            &:not(:last-child) {
+                border-right: 2px solid variables.$fourthColor;
+            }
+
+            .edit-button {
+                margin-right: 0.3rem;
+                color: variables.$fourthColor;
+                border: none;
+                font-size: 18px;
+                cursor: pointer;
+                background: transparent;
+
+                &:hover {
+                    color: variables.$firstColor
+                }
+            }
+
+            .delete-button {
+                margin: 0 0.3rem 0;
+                color: variables.$fourthColor;
+                border: none;
+                font-size: 18px;
+                cursor: pointer;
+                background: transparent;
+
+                &:hover {
+                    color: variables.$secondColor
+                }
+            }
+
+            .share-button {
+                margin: 0 0.3rem 0;
+                color: variables.$fourthColor;
+                border: none;
+                font-size: 18px;
+                cursor: pointer;
+                background: transparent;
+
+                &:hover {
+                    color: variables.$sixthColor
+                }
+            }
+        }
+
+        .align-left {
+            text-align: start;
+            text-transform: capitalize;
+        }
+
+        .empty-table {
+            height: 2rem;
+        }
+    }
+}

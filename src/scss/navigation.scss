@@ -1,0 +1,45 @@
+@use './variables.scss';
+@use './global.scss';
+
+.nav-container {
+    .nav-bar {
+        width: 100%;
+        height: 3rem;
+
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            list-style-type: none;
+            width: 100%;
+
+            li {
+                text-align: center;
+                background: variables.$sixthColor;
+                width: 100%;
+
+                .nav {
+                    padding-top: 0.7rem;
+                    height: 3rem;
+                    width: 100%;
+                    border: 2px solid variables.$backgroundBorder;
+                    display: inline-block;
+                    color: variables.$fourthColor;
+                    text-decoration: none;
+                    text-shadow: 2px 2px variables.$fifthColor;
+
+                    &:hover {
+                        border: 2px solid variables.$backgroundBorder;
+                        border-radius: 8px;
+                        background: variables.$fifthColor;
+                        text-shadow: 2px 2px variables.$sixthColor;
+                    }
+                }
+
+                .active {
+                    background-color: variables.$fifthColor;
+                    text-shadow: 2px 2px variables.$sixthColor;
+                }
+            }
+        }
+    }
+}

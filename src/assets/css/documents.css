@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.documents-list-form {
+  width: 100%;
+}
+.documents-list-form .documents-container {
+  margin-top: 1rem;
+  width: 100%;
+}
+.documents-list-form .documents-container .change-font {
+  margin-left: 0.3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  font-size: 23px;
+  font-weight: 600;
+  text-shadow: 2px 2px #bfbfbf;
+}
+.documents-list-form .documents-container .my-uploads-table,
+.documents-list-form .documents-container .shared-uploads-table {
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+.documents-list-form .documents-container .my-uploads-table colgroup .documents-first-column,
+.documents-list-form .documents-container .shared-uploads-table colgroup .documents-first-column {
+  width: 34.5%;
+}
+.documents-list-form .documents-container .my-uploads-table colgroup .documents-second-column,
+.documents-list-form .documents-container .shared-uploads-table colgroup .documents-second-column {
+  width: 34%;
+}
+.documents-list-form .documents-container .my-uploads-table colgroup .documents-third-column,
+.documents-list-form .documents-container .shared-uploads-table colgroup .documents-third-column {
+  width: 18%;
+}
+.documents-list-form .upload-file-button {
+  cursor: pointer;
+  font-weight: 600;
+  background: #66ffff;
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 0 1.9rem 0.3rem 0.5rem;
+  text-decoration: none;
+}
+.documents-list-form .upload-file-button:hover {
+  background: #bfbfbf;
+  color: #fff;
+  border: 2px solid #bfbfbf;
+}
+
+/*# sourceMappingURL=documents.css.map */

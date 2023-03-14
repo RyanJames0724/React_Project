@@ -1,0 +1,47 @@
+$default-font-size: 18px;
+$default-font-family: Arial, Helvetica, sans-serif;
+
+$flex-display: flex;
+
+//COLORS
+$firstColor: #66ffff;
+$secondColor: #ff3860;
+$thirdColor: #09c372;
+$fourthColor: #000;
+$fifthColor: #fff;
+$sixthColor: #bfbfbf;
+
+//BUTTONS
+$primaryButton: $firstColor;
+
+//ANCHOR COLOR
+$anchorColor: #1c1cff;
+
+//BORDER
+$backgroundBorder: $fourthColor;
+
+//VALIDATIONS COLOR
+$error: $secondColor;
+$success: $thirdColor;
+
+//DELETE MODAL
+//DELETE BACKGROUND
+$deleteBackground: rgba(165, 155, 155, 0.902);
+
+//UPLOAD MODAL
+//UPLOAD BACKGROUND
+$uploadBackground: rgba(0, 0, 0, 0.9);
+
+//EDIT MODAL
+//EDIT BACKGROUND
+$editBackground: rgba(0, 0, 0, 0.9);
+
+
+
+//for table use
+$tablefirstColor: #ccc;
+$tablesecondColor: #f0f0f0;
+
+@mixin buttonShadow($color: #3a3a3a) {
+    box-shadow: 0 0px 10px $color;
+}

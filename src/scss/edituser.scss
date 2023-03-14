@@ -1,0 +1,88 @@
+@use './variables.scss';
+@use './global.scss';
+
+.edit-user-form {
+    width: 100%;
+    display: variables.$flex-display;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    h1 {
+        font-size: 25px;
+        margin-left: 5rem;
+        text-shadow: 2px 2px variables.$sixthColor;
+    }
+
+    .form-container {
+
+        .edit-input {
+            display: variables.$flex-display;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+
+            .user-input {
+                font-weight: 600;
+
+                label {
+                    margin-right: 1.5rem;
+                }
+
+                .fullNameInput,
+                .emailInput {
+                    padding: 0.4rem;
+                    border: 2px solid variables.$backgroundBorder;
+                    border-radius: 5px;
+                }
+
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                .error {
+                    color: variables.$error;
+                    font-size: 9px;
+                    margin-top: .5rem;
+                    position: absolute;
+                    animation: fadeIn .3s ease-in-out;
+                }
+
+                .has-error {
+                    border: 2px solid variables.$error;
+                    animation: fadeIn .3s ease-in-out;
+                }
+
+                .success {
+                    border: 2px solid variables.$success;
+                    animation: fadeIn .3s ease-in-out;
+                }
+            }
+        }
+
+        .submit-edit {
+            width: 7rem;
+            margin-left: 7.9rem;
+            background: variables.$primaryButton;
+            padding: 0.2rem 0 0.5rem;
+            border: 2px solid variables.$backgroundBorder;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+                @include variables.buttonShadow;
+            }
+        }
+    }
+}

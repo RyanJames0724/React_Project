@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* style for both login page and register page */
+section .login-form-holder {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5rem;
+  gap: 2rem;
+}
+section .login-form-holder .login-heading {
+  margin-left: 8.9rem;
+}
+section .login-form-holder form {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+section .login-form-holder form .login-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+section .login-form-holder form .login-user-input .error {
+  color: #ff3860;
+  font-size: 9px;
+  margin-top: 0.5rem;
+  position: absolute;
+  animation: fadeIn 0.3s ease-in-out;
+}
+section .login-form-holder form .login-user-input .has-error {
+  border: 2px solid #ff3860;
+  animation: fadeIn 0.3s ease-in-out;
+}
+section .login-form-holder form .login-user-input .success {
+  border: 2px solid #09c372;
+  animation: fadeIn 0.3s ease-in-out;
+}
+section .login-form-holder form .submit-login {
+  border: 2px solid #000;
+  width: 7rem;
+  margin-left: 7.9rem;
+  background: #66ffff;
+  padding: 0.2rem 0 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  position: absolute;
+  margin-top: 12rem;
+  cursor: pointer;
+}
+section .login-form-holder form .submit-login:hover {
+  box-shadow: 0 0px 10px #3a3a3a;
+}
+
+/*# sourceMappingURL=login.css.map */

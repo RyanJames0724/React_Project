@@ -1,0 +1,101 @@
+@use './variables.scss';
+@use './navigation.scss';
+@use './table.scss';
+@use './global.scss';
+
+%change-font {
+    margin-left: 0.3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 600;
+    text-shadow: 2px 2px variables.$sixthColor;
+}
+
+.documents-container {
+    margin-top: 1rem;
+    width: 100%;
+
+    .change-font {
+        @extend %change-font;
+    }
+
+    .adding-size {
+        display: inline-block;
+        font-size: 23px;
+        margin-left: .3rem;
+    }
+
+    .share-file-table {
+        width: 100%;
+        border: 2px solid variables.$backgroundBorder;
+        border-radius: 5px;
+        overflow: hidden;
+
+        colgroup {
+
+            .share-first-column,
+            .share-second-column {
+                width: 50%;
+            }
+        }
+    }
+
+    .sharing-container {
+        margin-top: 2rem;
+
+        .change-font {
+            @extend %change-font;
+        }
+
+        .add-sharing-container {
+            border: 2px solid variables.$backgroundBorder;
+            border-radius: 4px;
+            width: 100%;
+            height: 5rem;
+            padding: 1.2rem 3rem 0.7rem;
+
+            * {
+                display: inline-block;
+                margin-left: 1.4rem;
+            }
+
+            p {
+                font-weight: 600;
+            }
+
+            .share-select-holder {
+                margin-left: 3rem;
+                margin-right: 4rem;
+
+                select {
+                    text-align: center;
+                    border: 2px solid variables.$backgroundBorder;
+                    border-radius: 4px;
+                    width: 22rem;
+                    height: 2rem;
+                    appearance: none;
+                    // background-position: calc(100% - -4px) !important;
+                    // background: url("../images/dropdown.png") no-repeat;
+                    // background-size: 40px;
+                }
+            }
+
+            .add-share {
+                font-weight: bold;
+                text-decoration: none;
+                border: 2px solid variables.$backgroundBorder;
+                border-radius: 10px;
+                padding: 0.2rem 0.5rem 0.3rem;
+                background: variables.$sixthColor;
+                cursor: pointer;
+
+                &:hover {
+                    background: variables.$sixthColor;
+                    color: variables.$fifthColor;
+                    border: 2px solid variables.$sixthColor;
+                }
+            }
+        }
+    }
+}

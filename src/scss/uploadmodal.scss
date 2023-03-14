@@ -1,0 +1,190 @@
+@use './variables.scss';
+@use './global.scss';
+
+.upload-main-container {
+    background: variables.$uploadBackground;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: variables.$flex-display;
+    justify-content: center;
+    align-items: center;
+
+    @keyframes fadeIn {
+        0% {
+            transform: scale(1) translate(0, 100%);
+            opacity: .3;
+
+        }
+
+        25% {
+            transform: scale(2) translate(0%, 50%);
+            opacity: .6;
+
+        }
+
+        75% {
+            transform: scale(3) translate(0%, 0%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(4) translate(0, -100%);
+            opacity: 0;
+        }
+    }
+}
+
+.upload-container {
+    background: variables.$fifthColor;
+    width: 40rem;
+    height: 14.8rem;
+    border: 2px solid variables.$backgroundBorder;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+
+    .file-upload-container {
+        padding-bottom: 0.7rem;
+        border-bottom: 2px solid variables.$backgroundBorder;
+
+        .upload-close {
+            height: 1.7rem;
+            display: variables.$flex-display;
+            justify-content: center;
+            align-items: center;
+            margin-left: 41px;
+            text-align: center;
+
+            p {
+                display: inline-block;
+                width: 60rem;
+                font-weight: 600;
+                font-size: 20px;
+                margin-top: 0.7rem;
+            }
+
+            .close-upload-button {
+                border: none;
+                margin: 0.8rem 0.2rem 0.2rem 0;
+                cursor: pointer;
+
+                &:hover {
+                    color: variables.$firstColor;
+                }
+            }
+        }
+    }
+
+    .modal-main-content {
+        padding: 1.5rem 0 2rem 0;
+        font-size: 20px;
+
+        .file-description {
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+
+            .upload-label {
+                width: 73%;
+                height: 2rem;
+                margin-left: 1.2rem;
+                border-radius: 5px;
+                padding-left: 0.6rem;
+                border: 2px solid variables.$backgroundBorder;
+            }
+
+            .has-error {
+                border: 2px solid variables.$error;
+            }
+
+            .success {
+                border: 2px solid variables.$success;
+            }
+
+            .error {
+                color: variables.$error;
+                font-size: 9px;
+            }
+        }
+
+        label[for="file-to-upload-description"],
+        label[for="file-to-upload"] {
+            font-weight: 600;
+        }
+
+        .file-to-upload {
+            margin: 0 0 2rem 3.5rem;
+
+            .choose {
+                margin-left: 2rem;
+                cursor: pointer;
+                font-weight: bold;
+                color: variables.$fourthColor;
+                width: 27rem;
+
+                &::-webkit-file-upload-button {
+                    font-weight: 600;
+                    border: 2px solid variables.$backgroundBorder;
+                    border-radius: 8px;
+                    background: variables.$sixthColor;
+                    margin-right: 30px;
+                    cursor: pointer;
+                    padding: 2px 1rem 0.3rem;
+                    width: 7rem;
+                }
+
+                &::-webkit-file-upload-button:hover {
+                    background: variables.$sixthColor;
+                    color: variables.$fifthColor;
+                    border: 2px solid variables.$sixthColor;
+                }
+            }
+
+            .error {
+                color: variables.$error;
+                font-size: 9px;
+            }
+        }
+
+        .upload-button-option {
+            margin-left: 4.6rem;
+
+            .upload-button {
+                text-decoration: none;
+                cursor: pointer;
+                font-weight: 500;
+                background: variables.$sixthColor;
+                font-weight: 600;
+                border: 2px solid variables.$backgroundBorder;
+                border-radius: 12px;
+                padding: 0.1rem 0.6rem 0.4rem;
+
+                &:hover {
+                    background: variables.$sixthColor;
+                    color: variables.$fifthColor;
+                    border: 2px solid variables.$sixthColor;
+                }
+            }
+
+            .cancel-upload-button {
+                margin-left: 1.2rem;
+                text-decoration: none;
+                cursor: pointer;
+                font-weight: 500;
+                background: variables.$sixthColor;
+                font-weight: 600;
+                border: 2px solid variables.$backgroundBorder;
+                border-radius: 12px;
+                padding: 4px 1.5rem 0.2rem;
+                position: relative;
+                top: 0.2rem;
+
+                &:hover {
+                    background: variables.$sixthColor;
+                    color: variables.$fifthColor;
+                    border: 2px solid variables.$sixthColor;
+                }
+            }
+        }
+    }
+}

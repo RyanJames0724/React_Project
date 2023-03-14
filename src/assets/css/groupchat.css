@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* styling the nav bar */
+.chat-form .chat-container {
+  border: 2px solid #000;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 1rem;
+}
+.chat-form .chat-container .chat-close {
+  display: flex;
+  border-bottom: 2px solid #000;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+.chat-form .chat-container .chat-close p {
+  margin-left: 34rem;
+  width: 10rem;
+  text-shadow: 2px 2px #bfbfbf;
+}
+.chat-form .chat-container .chat-close .close-image {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.chat-form .chat-container .chat-close .close-image .close-modal-fa:hover {
+  color: #66ffff;
+}
+.chat-form .chat-container .chat-main-content {
+  width: 100%;
+  padding: 2rem 1rem;
+  height: 18rem;
+}
+.chat-form .chat-container .chat-main-content p {
+  margin-bottom: 0.3rem;
+}
+.chat-form .user-message-container {
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-radius: 0 0 8px 8px;
+  width: 100%;
+  padding: 1.5rem 2rem 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 24.5rem;
+}
+.chat-form .user-message-container p {
+  font-weight: 700;
+  width: 9rem;
+}
+.chat-form .user-message-container .user-message {
+  width: 64rem;
+  height: 2.5rem;
+  outline: none;
+  border: 2px solid #000;
+  border-radius: 0.3rem;
+  padding: 0.8rem 1rem;
+}
+.chat-form .user-message-container .message-button {
+  width: 11rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.chat-form .user-message-container .message-button .send-message-button {
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 0.2rem 0.5rem 0.3rem;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.chat-form .user-message-container .message-button .send-message-button:hover {
+  background: #bfbfbf;
+  color: #fff;
+  border: 2px solid #bfbfbf;
+}
+.chat-form .user-message-container .message-button .refresh-page-button {
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 0.2rem 0.5rem 0.3rem;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.chat-form .user-message-container .message-button .refresh-page-button:hover {
+  background: #bfbfbf;
+  color: #fff;
+  border: 2px solid #bfbfbf;
+}
+
+/*# sourceMappingURL=groupchat.css.map */

@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form label {
+  margin-right: 1.5rem;
+}
+form .login-user-input,
+form .register-user-input {
+  font-weight: 600;
+}
+form .login-user-input .login-input-email,
+form .login-user-input .login-input-password,
+form .register-user-input .login-input-email,
+form .register-user-input .login-input-password {
+  padding: 0.4rem;
+  border: 2px solid;
+  border-radius: 5px;
+}
+form .login-user-input .register-input-name,
+form .login-user-input .register-input-email,
+form .login-user-input .register-input-password,
+form .login-user-input .register-input-confirm,
+form .register-user-input .register-input-name,
+form .register-user-input .register-input-email,
+form .register-user-input .register-input-password,
+form .register-user-input .register-input-confirm {
+  padding: 0.4rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=form.css.map */

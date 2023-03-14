@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.upload-main-container {
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes fadeIn {
+  0% {
+    transform: scale(1) translate(0, 100%);
+    opacity: 0.3;
+  }
+  25% {
+    transform: scale(2) translate(0%, 50%);
+    opacity: 0.6;
+  }
+  75% {
+    transform: scale(3) translate(0%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(4) translate(0, -100%);
+    opacity: 0;
+  }
+}
+
+.upload-container {
+  background: #fff;
+  width: 40rem;
+  height: 14.8rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.upload-container .file-upload-container {
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid #000;
+}
+.upload-container .file-upload-container .upload-close {
+  height: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 41px;
+  text-align: center;
+}
+.upload-container .file-upload-container .upload-close p {
+  display: inline-block;
+  width: 60rem;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 0.7rem;
+}
+.upload-container .file-upload-container .upload-close .close-upload-button {
+  border: none;
+  margin: 0.8rem 0.2rem 0.2rem 0;
+  cursor: pointer;
+}
+.upload-container .file-upload-container .upload-close .close-upload-button:hover {
+  color: #66ffff;
+}
+.upload-container .modal-main-content {
+  padding: 1.5rem 0 2rem 0;
+  font-size: 20px;
+}
+.upload-container .modal-main-content .file-description {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+.upload-container .modal-main-content .file-description .upload-label {
+  width: 73%;
+  height: 2rem;
+  margin-left: 1.2rem;
+  border-radius: 5px;
+  padding-left: 0.6rem;
+  border: 2px solid #000;
+}
+.upload-container .modal-main-content .file-description .has-error {
+  border: 2px solid #ff3860;
+}
+.upload-container .modal-main-content .file-description .success {
+  border: 2px solid #09c372;
+}
+.upload-container .modal-main-content .file-description .error {
+  color: #ff3860;
+  font-size: 9px;
+}
+.upload-container .modal-main-content label[for=file-to-upload-description],
+.upload-container .modal-main-content label[for=file-to-upload] {
+  font-weight: 600;
+}
+.upload-container .modal-main-content .file-to-upload {
+  margin: 0 0 2rem 3.5rem;
+}
+.upload-container .modal-main-content .file-to-upload .choose {
+  margin-left: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  width: 27rem;
+}
+.upload-container .modal-main-content .file-to-upload .choose::-webkit-file-upload-button {
+  font-weight: 600;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background: #bfbfbf;
+  margin-right: 30px;
+  cursor: pointer;
+  padding: 2px 1rem 0.3rem;
+  width: 7rem;
+}
+.upload-container .modal-main-content .file-to-upload .choose::-webkit-file-upload-button:hover {
+  background: #bfbfbf;
+  color: #fff;
+  border: 2px solid #bfbfbf;
+}
+.upload-container .modal-main-content .file-to-upload .error {
+  color: #ff3860;
+  font-size: 9px;
+}
+.upload-container .modal-main-content .upload-button-option {
+  margin-left: 4.6rem;
+}
+.upload-container .modal-main-content .upload-button-option .upload-button {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  background: #bfbfbf;
+  font-weight: 600;
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 0.1rem 0.6rem 0.4rem;
+}
+.upload-container .modal-main-content .upload-button-option .upload-button:hover {
+  background: #bfbfbf;
+  color: #fff;
+  border: 2px solid #bfbfbf;
+}
+.upload-container .modal-main-content .upload-button-option .cancel-upload-button {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  background: #bfbfbf;
+  font-weight: 600;
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 4px 1.5rem 0.2rem;
+  position: relative;
+  top: 0.2rem;
+}
+.upload-container .modal-main-content .upload-button-option .cancel-upload-button:hover {
+  background: #bfbfbf;
+  color: #fff;
+  border: 2px solid #bfbfbf;
+}
+
+/*# sourceMappingURL=uploadmodal.css.map */

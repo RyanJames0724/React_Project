@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.edit-main-container {
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes fadeIn {
+  from {
+    background: rgb(255, 255, 255);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+
+.edit-container {
+  background: #fff;
+  width: 35rem;
+  height: 15rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.edit-container .edit-upload-description {
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid #000;
+}
+.edit-container .edit-upload-description .edit-close {
+  height: 1.7rem;
+  display: flex;
+  align-items: center;
+  margin-left: 41px;
+  text-align: center;
+}
+.edit-container .edit-upload-description .edit-close p {
+  display: inline-block;
+  width: 60rem;
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 28px;
+}
+.edit-container .edit-upload-description .edit-close .close-edit-button {
+  margin: 0.8rem 0.2rem 0.2rem 0;
+  border: none;
+}
+.edit-container .edit-upload-description .edit-close .close-edit-button:hover {
+  color: #66ffff;
+}
+.edit-container .modal-main-content {
+  padding: 1.5rem 0 2rem 0;
+  font-size: 20px;
+}
+.edit-container .modal-main-content .file-description-edit {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+.edit-container .modal-main-content .file-description-edit label[for=file-to-edit] {
+  font-weight: 600;
+}
+.edit-container .modal-main-content .file-description-edit .edit-label {
+  width: 65%;
+  height: 2rem;
+  margin-left: 2.2rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding-left: 0.6rem;
+}
+.edit-container .modal-main-content .file-description-edit .error {
+  color: #ff3860;
+  font-size: 9px;
+}
+.edit-container .modal-main-content .file-description-edit .has-error {
+  border: 2px solid #ff3860;
+}
+.edit-container .modal-main-content .file-description-edit .success {
+  border: 2px solid #09c372;
+}
+.edit-container .modal-main-content .save-button-option {
+  margin-left: 12.6rem;
+}
+.edit-container .modal-main-content .save-button-option .save-button {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  background: #bfbfbf;
+  font-weight: 600;
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 5px 1.5rem 0.3rem;
+  position: relative;
+  top: 0.2rem;
+}
+.edit-container .modal-main-content .save-button-option .save-button:hover {
+  background: #bfbfbf;
+  color: #fff;
+  border: 2px solid #bfbfbf;
+}
+.edit-container .modal-main-content .save-button-option .cancel-save-button {
+  margin-left: 2.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  background: #bfbfbf;
+  font-weight: 600;
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 5px 1.5rem 0.3rem;
+  position: relative;
+  top: 0.2rem;
+}
+.edit-container .modal-main-content .save-button-option .cancel-save-button:hover {
+  background: #bfbfbf;
+  color: #fff;
+  border: 2px solid #bfbfbf;
+}
+
+/*# sourceMappingURL=editmodal.css.map */
