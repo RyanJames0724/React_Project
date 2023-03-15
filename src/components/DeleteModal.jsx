@@ -22,15 +22,15 @@ export default function UseDeleteModal(props) {
             const id = props.upload.id
             dispatch({ type: 'deleteUploadedFile', payload: id })
             window.location.reload()
-        } else if(props.deleteType === 'SharedUser' || props.deleteType === 'shareduser') {
+        } else if (props.deleteType === 'SharedUser' || props.deleteType === 'shareduser') {
             const userId = +props.selectedUser.selectedUserId
             const id = props.fileId
-            dispatch({ type: 'removeUserFromSharing', payload: {selectedId : userId, selectedFileId: id} })
+            dispatch({ type: 'removeUserFromSharing', payload: { selectedId: userId, selectedFileId: id } })
             window.location.reload()
         }
     }
 
-    
+
 
     //setting the changes on state to the local storage uding the useEffect
     useEffect(() => {

@@ -24,7 +24,7 @@ const Documents = () => {
     useEffect(() => {
         // check if the user is not logged in and navigate to the login page
         if (!JSON.parse(localStorage.getItem('loggedIn'))) {
-            navigate('/login')
+            navigate('/')
         }
     }, [navigate]);
 

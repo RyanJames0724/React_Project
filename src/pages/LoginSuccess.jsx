@@ -11,7 +11,7 @@ const LoginSuccess = () => {
     useEffect(() => {
         // check if the user is not logged in and navigate to the login page
         if (!currentUser) {
-            navigate('/login')
+            navigate('/')
         }
     }, [navigate, currentUser]);
 

@@ -26,7 +26,7 @@ const Share = () => {
     useEffect(() => {
         // check if the user is not logged in and navigate to the login page
         if (!JSON.parse(localStorage.getItem('loggedIn'))) {
-            navigate('/login')
+            navigate('/')
         }
     }, [navigate]);
 
@@ -67,8 +67,8 @@ const Share = () => {
         setShowDeleteModal({ isOpen: false, user: null })
     }
 
-    const myUploads = state.uploads.filter(upload => upload.userId === state.currentUser.id)
-    const selectedFile = myUploads.find(upload => upload.id === id)
+    // const myUploads = state.uploads.filter(upload => upload.userId === state.currentUser.id)
+    // const selectedFile = myUploads.find(upload => upload.id === id)
 
     return (
         <div>
@@ -88,7 +88,7 @@ const Share = () => {
                         </tr>
                     </thead>
                     <tbody className="t-body">
-                        {selectedFile ? selectedFile.shareTo.map((share, index) => (
+                        {displayFile ? displayFile.shareTo.map((share, index) => (
                             <tr key={index}>
                                 <td>{state.users.find(user => user.id === +share.selectedUserId).fullName}</td>
                                 <td><button className="delete-button" onClick={() => handleDelete(share)}>Remove</button></td>
