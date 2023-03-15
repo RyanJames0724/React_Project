@@ -35,17 +35,14 @@ const Share = () => {
     }
 
     const handleShare = () => {
-        const file = state.uploads.find(file => file.id === id);
-        console.log(selectedUser);
-        console.log(!file.shareTo.find(user => user.selectedUserId === selectedUser));
-        const usersWithSameFile = state.uploads.filter(upload => upload.file === file.file).filter(upload => upload.userId !== state.currentUser.id);
-        if (!!usersWithSameFile.find(user => user.userId === +selectedUser)) {
+        const usersWithSameFile = state.uploads.filter(upload => upload.file === displayFile.file).filter(upload => upload.userId !== state.currentUser.id);
+        if (usersWithSameFile.find(user => user.userId === +selectedUser)) {
             alert('File already uploaded by this user')
         } else {
-            if (!file.shareTo.find(user => user.selectedUserId === selectedUser)) {
+            if (!displayFile.shareTo.find(user => user.selectedUserId === selectedUser)) {
                 const updatedFile = {
-                    ...file,
-                    shareTo: [...file.shareTo, { selectedUserId: selectedUser }],
+                    ...displayFile,
+                    shareTo: [...displayFile.shareTo, { selectedUserId: selectedUser }],
                 };
 
                 const updatedUploads = state.uploads.map(file =>
@@ -96,7 +93,7 @@ const Share = () => {
                                 <td>{state.users.find(user => user.id === +share.selectedUserId).fullName}</td>
                                 <td><button className="delete-button" onClick={() => handleDelete(share)}>Remove</button></td>
                             </tr>
-                        )): null}
+                        )) : null}
                     </tbody>
                 </table>
                 <div className="sharing-container">
