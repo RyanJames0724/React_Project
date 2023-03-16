@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import '../assets/css/documents.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons"
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import UploadModal from "../components/UploadModal.jsx";
 import EditModal from "../components/EditModal";
 import UseDeleteModal from "../components/DeleteModal.jsx";
@@ -63,19 +60,6 @@ const Documents = () => {
     const uploadsFromOtherUsers = uploads.filter(upload =>
         upload.shareTo.some(user => +user.selectedUserId === id)
     );
-
-    const sortLabel = (uploadsFromOtherUsers) => {
-        uploadsFromOtherUsers.sort((a, b) => {
-            if (a.id < b.id) {
-                return -1;
-            }
-            if (a.id > b.id) {
-                return 1;
-            }
-            return 0;
-        });
-        console.log(uploadsFromOtherUsers)
-    }
 
     const emptyRowForMyUpload = [{}, {}]; // creates an array with two empty objects
     const emptyRowForShared = [{}, {}, {}]; // creates an array with two empty objects
@@ -147,13 +131,7 @@ const Documents = () => {
                         </colgroup>
                         <thead>
                             <tr>
-                                <th className="align-left add-space">
-                                    <span>Label</span>
-                                    <button onClick={() => sortLabel(uploadsFromOtherUsers)}>
-                                        <FontAwesomeIcon icon={faArrowUp} />
-                                        <FontAwesomeIcon icon={faArrowDown} />
-                                    </button>
-                                </th>
+                                <th className="align-left add-space">Label</th>
                                 <th className="border-left">File Name</th>
                                 <th className="border-left">Shared by</th>
                             </tr>
