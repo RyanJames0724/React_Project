@@ -6,7 +6,7 @@ import initialState from "../pages/InitialState";
 import { reducer } from "../pages/Reducer";
 import { useValidation } from "../pages/Validation";
 
-export default function UploadModal(props) {
+const UseUploadModal = (props) => {
     const { newSuccess, newErrors, validateType } = useValidation();
     const currentUser = JSON.parse(localStorage.getItem('loggedIn'))
     const [state, dispatch] = useReducer(reducer, initialState)
@@ -118,3 +118,5 @@ export default function UploadModal(props) {
         </div>
     )
 }
+
+export default UseUploadModal

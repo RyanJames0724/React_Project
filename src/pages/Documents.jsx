@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import '../assets/css/documents.css'
-import UploadModal from "../components/UploadModal.jsx";
-import EditModal from "../components/EditModal";
+import UseUploadModal from "../components/UploadModal.jsx";
+import UseEditModal from "../components/EditModal.jsx";
 import UseDeleteModal from "../components/DeleteModal.jsx";
 import { useNavigate } from "react-router-dom";
 
@@ -177,10 +177,10 @@ const Documents = () => {
                         </tbody>
                     </table>
                     {showModal && !isEdit && (
-                        <UploadModal onCancel={handleCancel} />
+                        <UseUploadModal onCancel={handleCancel} />
                     )}
                     {showModal && isEdit && (
-                        <EditModal upload={selectedUpload} onCancel={handleCancel} />
+                        <UseEditModal upload={selectedUpload} onCancel={handleCancel} />
                     )}
                     {showDeleteModal && (
                         <UseDeleteModal onCancel={handleCancel} upload={selectedUpload} deleteType={deleteType} />

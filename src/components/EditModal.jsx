@@ -5,7 +5,7 @@ import { faRectangleXmark } from '@fortawesome/free-solid-svg-icons'
 import initialState from "../pages/InitialState";
 import { reducer } from "../pages/Reducer";
 
-export default function EditModal(props) {
+const UseEditModal = (props) => {
     const [state, dispatch] = useReducer(reducer, initialState)
     const [fileDescription, setFileDescription] = useState(props.upload.fileDescription)
     const [errors, setErrors] = useState({});
@@ -80,3 +80,5 @@ export default function EditModal(props) {
         </div>
     )
 }
+
+export default UseEditModal
