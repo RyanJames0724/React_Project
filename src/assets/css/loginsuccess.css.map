@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../scss/global.scss","../../scss/variables.scss","../../scss/loginsuccess.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;;;AAGF;EACE,WCTkB;EDUlB,aCToB;;;ACEtB;EACI;EACA;;AAEA;EACI;EACA","file":"loginsuccess.css"}
+{"version":3,"sourceRoot":"","sources":["../../scss/global.scss","../../scss/variables.scss","../../scss/loginsuccess.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;;;AAGF;EACE,WCTkB;EDUlB,aCToB;;;ADYtB;EACE;IACE;;;AEZJ;EACI;EACA;;AAEA;EACI;EACA","file":"loginsuccess.css"}

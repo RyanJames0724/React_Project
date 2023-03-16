@@ -9,6 +9,11 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 18px;
+  }
+}
 form label {
   margin-right: 1.5rem;
 }
@@ -37,6 +42,42 @@ form .register-user-input .register-input-confirm {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 400px) {
+  form label {
+    font-size: 18px;
+    margin-left: 0.2rem;
+  }
+  form .login-user-input,
+  form .register-user-input {
+    font-weight: 600;
+  }
+  form .login-user-input .login-input-email,
+  form .login-user-input .login-input-password,
+  form .register-user-input .login-input-email,
+  form .register-user-input .login-input-password {
+    font-size: 18px;
+    height: 3rem;
+    border: 2px solid;
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  form .login-user-input .register-input-name,
+  form .login-user-input .register-input-email,
+  form .login-user-input .register-input-password,
+  form .login-user-input .register-input-confirm,
+  form .register-user-input .register-input-name,
+  form .register-user-input .register-input-email,
+  form .register-user-input .register-input-password,
+  form .register-user-input .register-input-confirm {
+    font-size: 18px;
+    height: 3rem;
+    border: 2px solid #000;
+    display: block;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+}
 /* style for both login page and register page */
 section .register-form-holder {
   display: flex;
@@ -84,20 +125,61 @@ section .register-form-holder form .registration-holder .register-user-input .su
   border: 2px solid #09c372;
   animation: fadeIn 0.3s ease-in-out;
 }
-section .register-form-holder form .submit-registration {
+section .register-form-holder form .submit-holder {
+  width: 100%;
+  text-align: center;
+}
+section .register-form-holder form .submit-holder .submit-registration {
   width: 7rem;
-  margin-left: 11.9rem;
+  margin-left: 10rem;
   background: #66ffff;
   padding: 0.2rem 0 0.5rem;
   border: 2px solid #000;
   border-radius: 10px;
   font-weight: 600;
-  position: absolute;
-  margin-top: 17.5rem;
   cursor: pointer;
 }
-section .register-form-holder form .submit-registration:hover {
+section .register-form-holder form .submit-holder .submit-registration:hover {
   box-shadow: 0 0px 10px #3a3a3a;
+}
+
+@media screen and (max-width: 400px) {
+  section {
+    width: 100%;
+  }
+  section .register-form-holder {
+    width: 100%;
+    margin-top: 2rem;
+    align-items: center;
+    left: 0;
+  }
+  section .register-form-holder header .registration-heading {
+    margin-left: 0;
+  }
+  section .register-form-holder form {
+    width: 100%;
+    align-items: center;
+  }
+  section .register-form-holder form .registration-holder {
+    width: 100%;
+  }
+  section .register-form-holder form .registration-holder .register-user-input {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+  section .register-form-holder form .registration-holder .register-user-input .error {
+    font-size: 12px;
+    margin-left: 0.2rem;
+  }
+  section .register-form-holder form .submit-holder {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  section .register-form-holder form .submit-holder .submit-registration {
+    margin: 0;
+    width: 10rem;
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=register.css.map */

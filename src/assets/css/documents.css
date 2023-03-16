@@ -9,6 +9,11 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 18px;
+  }
+}
 .documents-list-form {
   width: 100%;
 }

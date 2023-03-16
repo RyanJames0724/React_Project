@@ -93,7 +93,9 @@ const Login = () => {
                             )}
                         </div>
                     </div>
-                    <input type="submit" value="Login" className="submit-login" />
+                    <div className="submit-holder">
+                        <input type="submit" value="Login" className="submit-login" />
+                    </div>
                 </form>
             </div>
         </section>

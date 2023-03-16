@@ -27,3 +27,40 @@ form {
         }
     }
 }
+
+@media screen and (max-width: 400px) {
+    form {
+        label {
+            font-size: 18px;
+            margin-left: .2rem;
+        }
+
+        .login-user-input,
+        .register-user-input {
+            font-weight: 600;
+
+            .login-input-email,
+            .login-input-password {
+                font-size: 18px;
+                height: 3rem;
+                border: 2px solid;
+                display: block;
+                width: 100%;
+                margin-top: .5rem;
+            }
+
+            .register-input-name,
+            .register-input-email,
+            .register-input-password,
+            .register-input-confirm {
+                font-size: 18px;
+                height: 3rem;
+                border: 2px solid variables.$fourthColor;
+                display: block;
+                margin-top: .5rem;
+                width: 100%;
+            }
+        }
+    }
+
+}
