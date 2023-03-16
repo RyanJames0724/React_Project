@@ -10,3 +10,9 @@ html {
   font-size: variables.$default-font-size;
   font-family: variables.$default-font-family;
 }
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 18px;
+  }
+}

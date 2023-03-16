@@ -9,6 +9,11 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 18px;
+  }
+}
 .main-container {
   background: rgba(165, 155, 155, 0.902);
   width: 100%;

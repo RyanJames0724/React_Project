@@ -9,6 +9,11 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 18px;
+  }
+}
 /* style for both login page and register page */
 section .login-form-holder {
   display: flex;
@@ -54,20 +59,62 @@ section .login-form-holder form .login-user-input .success {
   border: 2px solid #09c372;
   animation: fadeIn 0.3s ease-in-out;
 }
-section .login-form-holder form .submit-login {
+section .login-form-holder form .submit-holder {
+  width: 100%;
+  text-align: center;
+}
+section .login-form-holder form .submit-holder .submit-login {
   border: 2px solid #000;
   width: 7rem;
-  margin-left: 7.9rem;
+  margin-left: 6rem;
   background: #66ffff;
   padding: 0.2rem 0 0.5rem;
   border-radius: 10px;
   font-weight: 600;
-  position: absolute;
-  margin-top: 12rem;
   cursor: pointer;
 }
-section .login-form-holder form .submit-login:hover {
+section .login-form-holder form .submit-holder .submit-login:hover {
   box-shadow: 0 0px 10px #3a3a3a;
+}
+
+@media screen and (max-width: 400px) {
+  section {
+    width: 100%;
+  }
+  section .login-form-holder {
+    width: 100%;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  section .login-form-holder .login-heading {
+    margin-left: 0;
+    font-size: 25px;
+  }
+  section .login-form-holder form {
+    width: 100%;
+    align-items: center;
+  }
+  section .login-form-holder form .login-holder {
+    width: 100%;
+    align-items: center;
+  }
+  section .login-form-holder form .login-holder .login-user-input {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+  section .login-form-holder form .login-holder .login-user-input .error {
+    font-size: 12px;
+    margin-left: 0.2rem;
+  }
+  section .login-form-holder form .submit-holder {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  section .login-form-holder form .submit-holder .submit-login {
+    margin: 0;
+    width: 10rem;
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=login.css.map */

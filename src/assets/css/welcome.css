@@ -9,6 +9,11 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 18px;
+  }
+}
 /* nested style for the welcome page */
 section {
   display: flex;

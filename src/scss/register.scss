@@ -4,77 +4,130 @@
 
 /* style for both login page and register page */
 section {
-  .register-form-holder {
-    display: variables.$flex-display;
-    flex-direction: column;
-    margin-top: 4.5rem;
-    gap: 2rem;
-    position: absolute;
-    left: 25rem;
-
-    .registration-heading {
-      margin-left: 12.2rem;
-    }
-
-    form {
-      display: inline-flex;
-      flex-direction: column;
-      gap: 2rem;
-      justify-content: center;
-
-      .registration-holder {
+    .register-form-holder {
         display: variables.$flex-display;
         flex-direction: column;
-        align-items: flex-end;
-        gap: 1.5rem;
-
-        .register-user-input {
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-            }
-
-            to {
-              opacity: 1;
-            }
-          }
-
-          .error {
-            color: variables.$error;
-            font-size: 9px;
-            margin-top: 0.5rem;
-            position: absolute;
-            animation: fadeIn 0.3s ease-in-out;
-          }
-
-          .has-error {
-            border: 2px solid variables.$error;
-            animation: fadeIn 0.3s ease-in-out;
-          }
-
-          .success {
-            border: 2px solid variables.$success;
-            animation: fadeIn 0.3s ease-in-out;
-          }
-        }
-      }
-
-      .submit-registration {
-        width: 7rem;
-        margin-left: 11.9rem;
-        background: variables.$primaryButton;
-        padding: 0.2rem 0 0.5rem;
-        border: 2px solid variables.$backgroundBorder;
-        border-radius: 10px;
-        font-weight: 600;
+        margin-top: 4.5rem;
+        gap: 2rem;
         position: absolute;
-        margin-top: 17.5rem;
-        cursor: pointer;
+        left: 25rem;
 
-        &:hover {
-          @include variables.buttonShadow;
+        .registration-heading {
+            margin-left: 12.2rem;
         }
-      }
+
+        form {
+            display: inline-flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+
+            .registration-holder {
+                display: variables.$flex-display;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 1.5rem;
+
+                .register-user-input {
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                        }
+
+                        to {
+                            opacity: 1;
+                        }
+                    }
+
+                    .error {
+                        color: variables.$error;
+                        font-size: 9px;
+                        margin-top: 0.5rem;
+                        position: absolute;
+                        animation: fadeIn 0.3s ease-in-out;
+                    }
+
+                    .has-error {
+                        border: 2px solid variables.$error;
+                        animation: fadeIn 0.3s ease-in-out;
+                    }
+
+                    .success {
+                        border: 2px solid variables.$success;
+                        animation: fadeIn 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .submit-holder {
+                width: 100%;
+                text-align: center;
+
+                .submit-registration {
+                    width: 7rem;
+                    margin-left: 10rem;
+                    background: variables.$primaryButton;
+                    padding: 0.2rem 0 0.5rem;
+                    border: 2px solid variables.$backgroundBorder;
+                    border-radius: 10px;
+                    font-weight: 600;
+                    cursor: pointer;
+
+                    &:hover {
+                        @include variables.buttonShadow;
+                    }
+                }
+            }
+        }
     }
-  }
+}
+
+@media screen and (max-width: 400px) {
+    section {
+        width: 100%;
+
+        .register-form-holder {
+            width: 100%;
+            margin-top: 2rem;
+            align-items: center;
+            left: 0;
+
+            header {
+
+                .registration-heading {
+                    margin-left: 0;
+                }
+            }
+
+            form {
+                width: 100%;
+                align-items: center;
+
+                .registration-holder {
+                    width: 100%;
+
+                    .register-user-input {
+                        width: 100%;
+                        padding: 0 1.5rem;
+
+                        .error {
+                            font-size: 12px;
+                            margin-left: .2rem;
+                        }
+                    }
+                }
+
+                .submit-holder {
+                    text-align: center;
+                    margin-top: 1rem;
+
+                    .submit-registration {
+                        margin: 0;
+                        width: 10rem;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
 }
